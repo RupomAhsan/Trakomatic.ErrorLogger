@@ -1,4 +1,5 @@
 ﻿using Configurations.Authentications;
+using Domain.Entities.Utility;
 using Entities.Authentications;
 using Entities.Corporates;
 using System;
@@ -30,6 +31,11 @@ namespace Infrastructures
         public virtual void Commit()
         {
             base.SaveChanges();
+        }
+
+        public string Connectionstring()
+        {
+           return Database.Connection.ConnectionString;
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -70,6 +76,9 @@ namespace Infrastructures
         public DbSet<SupportEmails> SupportEmails { get; set; }
         public DbSet<SupportSMS> SupportSMSs { get; set; }
         public DbSet<ZoneSetup> ZoneSetups { get; set; }
+
+        //Utility
+        public DbSet<Notification> Notification { get; set; }
         #endregion
     }
 }

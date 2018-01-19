@@ -77,6 +77,7 @@
     <Compile Include="Entities\Corporates\SupportEmails.cs" />
     <Compile Include="Entities\Corporates\SupportSMS.cs" />
     <Compile Include="Entities\Corporates\ZoneSetup.cs" />
+    <Compile Include="Entities\Utility\Notification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
